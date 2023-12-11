@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'vendor/css/main.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header-top">
+        <div class="container">
+            <div class="content_in_header-top">
+                <p>Наш Телеграм канал, оптових товарів:</p>
+                <a href="#" style="text-decoration: none; color: #fff;">Войти/Регистрация</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="container">
+            <div class="content_in_header-bottom">
+                <div class="logo">
+                    <img src="{% static 'vendor/images/ototo.png' %}" alt="">
+                </div>
+                <div class="search">
+                    <input placeholder="Поиск товара" class="input" name="email" type="email">
+                    <button class="buttonn">Поиск</button>
+                </div>
+                <div class="call-us">
+                    <img src="{% static 'vendor/images/baket.png' %}" alt="" style="width: 50px; height: 50px;">
+                    <p style="padding-top: 15px; padding-left: 10px;">+38 (068) 911-33-46</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="container">
+            <div class="content_in-navigation">
+                <div class="categori">
+                    <p style="padding-top: 13px; padding-left: 15px;">Категории товаров</p>
+                </div>
+                <nav>
+                    <p class="nav_text">ГЛАВНАЯ</p>
+                    <p class="nav_text" style="color: rgba(64, 36, 107, 1);">МАГАЗИН</p>
+                    <p class="nav_text">ДОСТАВКА ТА ОПЛАТА</p>
+                    <p class="nav_text">КОНТАКТЫ</p>
+                    <p class="nav_text">О НАС</p>
+                </nav>
+                <div class="baket">
+                    <img src="{% static 'vendor/images/free-icon-shopping-bag-2956820.png' %}" alt=""
+                        style="width: 50px; height: 50px;">
+                    <p>0 ГРН</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="full_main">
+            <div class="categori_in-main" style="max-width: 270px;">
+                <div class="product-categori">
+                    <p class="name_of-categori"
+                        style="font-size: 20px; font-family: 'Inter', sans-serif; padding-top: 40px; padding-bottom: 30px;">
+                        КАТЕГОРИИ ТОВАРОВ</p>
+                    <h4 class="category-headings" data-category="Зарядные устройства">Зарядные устройства</h4>
+                    <h4 class="category-headings" data-category="Фонарики">Фонарики</h4>
+                    <h4 class="category-headings" data-category="Новый год">Новий год</h4>
+                    <div class="nav_href" id="category-links">
+                        <div class="faq_item">
+                            <label class="faq_title" for="faq_1">
+                                <a href="product.html" class="link-1" style="text-decoration: none;">Для дому</a>
+                                <button class="faq_button">+</button>
+                            </label>
+                            <input type="checkbox" class="faq_input" id="faq_1">
+                            <div class="faq_text">
+                                <p>запальнички</p>
+                                <p>вішалки, гачки</p>
+                                <p>відра, тази</p>
+                                <p>килимки</p>
+                                <p>товар для ванної кімнати</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="category-headings" data-category="Фонарики">Фонарики</h4>
+                </div>
+                <hr style="margin-top: 10px;">
+                <div class="filter-container" style="margin-top: 15px;">
+                    <label for="priceRange">Фильтр цены</label>
+                    <div class="filter-controls">
+                        <input type="range" id="priceRange" min="0" max="1000" step="10" value="0"
+                            style="background: linear-gradient(to right, #4CAF50 0%, #4CAF50 100%);">
+                        <output for="priceRange">0</output>
+                        <button class="apply-button" onclick="applyFilter()">Применить</button>
+                    </div>
+                </div>
+                <hr style="margin-top: 10px;">
+                <p class="top_text">ТОП ПРОДАЖ</p>
+                <div class="top_sale">
+                    <div class="product">
+                        <img src="assets/images/c-58-1.jpg" alt="" class="img_in-top">
+                        <div class="text_in-top">
+                            <p>Ручной фонарь <strong>LED+COB NF-C58</strong></p>
+                            <p class="price_recom"><strong>180 грн.</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="top_sale">
+                    <div class="product">
+                        <img src="{% static 'vendor/images/c-58-1.jpg' %}" alt="" class="img_in-top">
+                        <div class="text_in-top">
+                            <p>Ручной фонарь <strong>LED+COB NF-C58</strong></p>
+                            <p class="price_recom"><strong>180 грн.</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="top_sale">
+                    <div class="product">
+                        <img src="assets/images/c-58-1.jpg" alt="" class="img_in-top">
+                        <div class="text_in-top">
+                            <p>Ручной фонарь <strong>LED+COB NF-C58</strong></p>
+                            <p class="price_recom"><strong>180 грн.</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="top_sale">
+                    <div class="product">
+                        <img src="assets/images/c-58-1.jpg" alt="" class="img_in-top">
+                        <div class="text_in-top">
+                            <p>Ручной фонарь <strong>LED+COB NF-C58</strong></p>
+                            <p class="price_recom"><strong>180 грн.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="main_product">
+                    <div class="product-item">
+                        <img src="https://html5book.ru/wp-content/uploads/2015/10/black-dress.jpg">
+                        <div class="product-list">
+                            <h3>Маленькое черное платье</h3>
+                            <span class="price">₽ 1999</span>
+                            <a href="" class="button">В корзину</a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://html5book.ru/wp-content/uploads/2015/10/black-dress.jpg">
+                        <div class="product-list">
+                            <h3>Маленькое черное платье</h3>
+                            <span class="price">₽ 1999</span>
+                            <a href="" class="button">В корзину</a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://html5book.ru/wp-content/uploads/2015/10/black-dress.jpg">
+                        <div class="product-list">
+                            <h3>Маленькое черное платье</h3>
+                            <span class="price">₽ 1999</span>
+                            <a href="" class="button">В корзину</a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://html5book.ru/wp-content/uploads/2015/10/black-dress.jpg">
+                        <div class="product-list">
+                            <h3>Маленькое черное платье</h3>
+                            <span class="price">₽ 1999</span>
+                            <a href="" class="button">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section contact-info">
+                    <img src="{% static 'vendor/images/13.png' %}" alt="" style="padding-top: 30px;">
+                    <p style="color: #fff; padding-left: 10px; padding-top: 10px; font-family: 'Inter', sans-serif;">+38 (068) 911-33-46</p>
+                    <p style="color: #fff; padding-left: 10px; padding-top: 10px; font-family: 'Inter', sans-serif;">info@eto-to.com.ua</p>
+                    <p style="color: #fff; padding-left: 10px; padding-top: 10px; font-family: 'Inter', sans-serif;">Одесса (7 км.), Базовая</p>
+                </div>
+                <div class="footer-section categories" style="padding-top: 30px;">
+                    <h3>Категории</h3>
+                    <ul>
+                        <li><a href="#" style="color: #fff; padding-top: 10px; font-family: 'Inter', sans-serif;">Зарядні пристрої</a></li>
+                        <li><a href="#" style="color: #fff; padding-top: 10px; font-family: 'Inter', sans-serif;">Ліхтарики</a></li>
+                        <li><a href="#" style="color: #fff; padding-top: 10px; font-family: 'Inter', sans-serif;">Іграшки</a></li>
+                        <li><a href="#" style="color: #fff; padding-top: 10px; font-family: 'Inter', sans-serif;">Новий рік</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section information" style="padding-top: 30px;">
+                    <h3>Інформація</h3>
+                    <ul>
+                        <li><a href="#" style="color: #fff; padding-top: 10px; font-family: 'Inter', sans-serif;">Про нас</a></li>
+                        <li><a href="#" style="color: #fff; padding-top: 10px; font-family: 'Inter', sans-serif;">Гарантія та повернення</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section working-hours" style="padding-top: 30px;">
+                    <h3 >Графік роботи</h3>
+                    <p style="color: #fff; padding-top: 10px; font-family: 'Inter', sans-serif;">Пн-Пт: с 09:00 до 20:00</p>
+                    <p style="color: #fff; padding-top: 10px; font-family: 'Inter', sans-serif;">Суббота: с 09:00 до 18:00</p>
+                    <p style="color: #fff; padding-top: 10px; font-family: 'Inter', sans-serif;">Воскресенье: с 09:00 до 16:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let faqButtons = document.querySelectorAll('.faq_button');
+        let faqTexts = document.querySelectorAll('.faq_text');
+
+        faqButtons.forEach(function (button, index) {
+            button.addEventListener('click', function () {
+                if (faqTexts[index].classList.contains('active')) {
+                    faqTexts[index].classList.remove('active');
+                } else {
+                    faqTexts[index].classList.add('active');
+                }
+            });
+        });
+
+        let buttonOpen = document.getElementById('category-links');
+
+        buttonOpen.addEventListener('click', function () {
+            if (buttonOpen.classList.contains('active')) {
+                buttonOpen.classList.remove('active');
+            } else {
+                buttonOpen.classList.add('active');
+            }
+        });
+    </script>
+    <script>
+        function applyFilter() {
+            let priceValue = document.getElementById('priceRange').value;
+            console.log('Выбранная цена:', priceValue);
+        }
+
+        document.getElementById('priceRange').addEventListener('input', function () {
+            document.querySelector('output[for="priceRange"]').textContent = this.value;
+        });
+    </script>
+</body>
+
+</html>
